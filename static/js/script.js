@@ -86,3 +86,23 @@ function trabajoMatriz() {
     tablero[2][2] = 1;
     alert(tablero)
 }
+
+
+/*ejercicio 9*/
+function consultaMedica() {
+    let pacientes = ["ana", "betto"];
+    pacientes.push("carlos", "diana");
+    pacientes.shift();
+    pacientes.unshift("sonia");
+    alert(`quedan ${pacientes.length} y el siguientes es ${pacientes[1]}`)
+}
+
+
+/*ejercicio 10*/
+function extraccionProfunda() {
+    let caja = [
+        ["frutas", "verduras"],
+        [["manzana", "pera"], ["tomate", "lechuga"]]
+    ];
+    alert(`en la canasta hay ${caja [1][0][1]} y ${caja[1][1][1]}`)
+}
