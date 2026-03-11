@@ -29,7 +29,16 @@ function filaEspera() {
     }
 }
 
-/*ejercicio 3*/
-function prioridad() {
 
+/*BLOQUE 2*/
+/*ejercicio 3*/
+function reordenarDatos() {
+    let productos = ["celular", "teclado", "mouse"];
+    let nuevoProducto = "celular";
+
+    if (productos.includes(nuevoProducto)){
+        alert("el producto ya esta en el inventario");
+    } else {
+        alert("el producto no esta en el inventario");
+    }
 }
