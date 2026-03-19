@@ -119,7 +119,7 @@ function simularCuotas() {
     container.classList.remove("d-none");
 }
 
-shgdsaaj
+
 
 /*ejercicio 6*/
 
