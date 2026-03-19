@@ -71,25 +71,53 @@ function gestionarPedidos(){
 /*ejercicio 4*/
 let codigosValidos = ["VERANO2026", "PROMO50", "CLIENTEVIP"];
 function buscarCodigo(codigo) {
-    let mensaje = "valido";
+    let mensaje = "codigo invalido o expirado";
     for (let i = 0; i < codigosValidos.length; i++){
-        if(accion === codigosValidos[i]){
-            mensaje = "invalido";
+        if(codigo == codigosValidos[i]){
+            mensaje = "¡exito! codigo aceptado";
+            return "¡exito! codigo aceptado";
+        } else {
+            mensaje = "ingresa un codigo valido";
         }
     }
+    return mensaje
 }
 
 function verificarCodigo() {
     const container = document.getElementById("container4");
     const result = document.getElementById("result4");
     const input = document.getElementById("input4");
-    let accion = input.value.trim();
-    let resultado = buscarCodigo(accion);
+    let codigo = input.value.toUpperCase();
+    let resultado = buscarCodigo(codigo);
+    result.textContent = resultado;
+    input.value = "";
+    container.classList.remove("d-none");
 }
 
 
 
 /*ejercicio 5*/
+function calcularCuota(valor, cuota){
+    let registroPagos = "";
+    for(let i = 1; i<= 3; i++) {
+        registroPagos += ` | Cuota ${i} de ${cuota}: ${valor/3}`;
+    }
+    return registroPagos;
+};
+
+function simularCuotas() {
+    const producto = document.getElementById("input5_1");
+    let valorProducto = parseInt(producto.value);
+    const cuotaInput = document.getElementById("input5_2");
+    let cuotas = parseInt(cuotaInput.value);
+    const result = document.getElementById("result5");
+    const container = document.getElementById("container5");
+    let resultado = calcularCuotas(valorProducto, cuota)
+    result.textContent = registroPagos;
+    producto.value = "";
+    cuota.value = "";
+    container.classList.remove("d-none");
+}
 
 
 
