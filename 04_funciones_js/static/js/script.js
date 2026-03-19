@@ -44,10 +44,48 @@ function ingresarUrgencia(){
 
 
 /*ejercicio 3*/
+let entregas = ["pizza", "sushi", "hamburguesa", "ensalada"]
+function actualizarPedidos(pedido){
+    if(pedido == "despachar") {
+        entregas.shift()
+    } else if (pedido == "cancelar") {
+        entregas.pop()
+    } else{
+        alert("ingrese un valor valido")
+    }
+    return `Pedidos pendientes: ${entregas.join(", ")};`
+}
+
+function gestionarPedidos(){
+    const container = document.getElementById("container3");
+    const result = document.getElementById("result3");
+    let input = document.getElementById("input3").value;
+    let resultado = actualizarPedidos(input);
+        result.textContent = resultado;
+        input.value = "";
+        container.classList.remove("d-none");
+}
 
 
 
 /*ejercicio 4*/
+let codigosValidos = ["VERANO2026", "PROMO50", "CLIENTEVIP"];
+function buscarCodigo(codigo) {
+    let mensaje = "valido";
+    for (let i = 0; i < codigosValidos.length; i++){
+        if(accion === codigosValidos[i]){
+            mensaje = "invalido";
+        }
+    }
+}
+
+function verificarCodigo() {
+    const container = document.getElementById("container4");
+    const result = document.getElementById("result4");
+    const input = document.getElementById("input4");
+    let accion = input.value.trim();
+    let resultado = buscarCodigo(accion);
+}
 
 
 
